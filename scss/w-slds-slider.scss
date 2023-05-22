@@ -110,9 +110,8 @@
       }
     }
     .w-slds-pict {
-      width: 100%;
-      flex: 0 0 100%;
-      max-width: 100%;
+      flex: 0 0 auto;
+      max-width: none;
       height: 196px;
       max-height: 196px;
       overflow: hidden;
