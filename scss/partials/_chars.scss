@@ -1,0 +1,15 @@
+.w-slds-chars {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  &-itm {
+    margin-top: 10px;
+  }
+  &-ttl {
+    font-weight: 400;
+    color: $grey;
+  }
+  &-val {
+    margin-top: 2px;
+  }
+}

@@ -1,0 +1,144 @@
+@import "variables";
+@import "mixins/breakpoints";
+@import "partials/fonts";
+@import "partials/buttons";
+@import "partials/w-slds-card-h";
+@import "partials/carousel-settings";
+.w-slds {
+  font-family: $font-family-base;
+  color: $dakr;
+  max-width: 1184px;
+  margin: 25px auto;
+  overflow: hidden;
+  @include media-breakpoint-up(md) {
+    margin: 50px auto;
+  }
+  * {
+    box-sizing: border-box;
+    font-family: $font-family-base;
+  }
+}
+.w-slds-slider {
+  position: relative;
+  @include media-breakpoint-up(md) {
+      padding: 0 44px;
+  }
+  &.has-one-slide {
+    padding: 0;
+    .w-slds-prev,
+    .w-slds-next {
+      display: none;
+    }
+  }
+  .swiper {
+    margin-left: -11px;
+    margin-right: -11px;
+    padding-bottom: 50px;
+    &:not(.swiper-initialized) {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  .swiper-slide {
+    padding: 0 11px;
+    height: auto;
+    display: flex;
+  }
+  .w-slds-prev,
+  .w-slds-next {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      margin-top: -25px;
+        
+    }
+
+  }
+  .swiper-pagination {
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+  }
+  &.carousel-phone {
+    @include media-breakpoint-up(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .w-slds-prev,
+    .w-slds-next {
+      display: none;
+    }
+  }
+  &.carousel-tablet {
+    .w-slds-desc {
+      @include media-breakpoint-up(md) {
+        padding: 15px 10px;
+
+      }
+    }
+    .w-slds-card-h .w-slds-btm .w-slds-btn-wrap {
+      flex: 0;
+    }
+    .w-slds-card-h .w-slds-card-popup .w-slds-card-popup-btn {
+      @include media-breakpoint-up(md) {
+        width: 146px;
+        right: 10px;
+      }
+    }
+    .w-slds-card-popup {
+      @include media-breakpoint-up(xl) {
+        padding-right: 210px;
+      }
+    }
+  }
+  &.carousel-phone {
+    .w-slds-card-h {
+      flex-direction: column;
+      .w-slds-card-popup {
+        @include media-breakpoint-up(md) {
+          padding-right: 24px;
+          .w-slds-card-popup-btn {
+            width: 100%;
+            position: static;
+            margin-top: 20px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            transform: none;
+          }
+        }
+      }
+    }
+    .w-slds-pict {
+      width: 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      height: 196px;
+      max-height: 196px;
+      overflow: hidden;
+      margin: -1px -1px 0;
+      border-radius: 20px 20px 0 0;
+    }
+    .w-slds-desc {
+      flex-direction: column;
+    }
+    .w-slds-btm {
+      display: flex;
+      align-items: center;
+      flex-flow: row nowrap;
+      align-items: center;
+      padding-top: 25px;
+      width: 100%;
+      max-width: 100%;
+      flex: 1;
+      .w-slds-btn-wrap {
+        margin-bottom: 0;
+        order: 2;
+        width: 146px;
+        max-width: 146px;
+        margin-left: auto;
+      }
+    }
+  }
+
+}
