@@ -8,12 +8,14 @@
   border: none;
   padding: 12px 26px;
   font-weight: 700;
+  white-space: nowrap;
   font-size: 18px;
   line-height: 25px;
   font-family: $font-family-base;
   height: 49px;
   text-decoration: none;
   transition: background 0.3s , box-shadow 0.3s;
+  cursor: pointer;
   &:hover {
     background: linear-gradient(0deg, #5BEE37 0%, #1EB949 100%);
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
@@ -23,6 +25,23 @@
     &:hover {
       background-color: $orange;
       box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+    }
+  }
+  &.w-slds-btn-blue {
+    background: #64B5FF;
+    &.is-active,
+    &:hover {
+      background-color: #2183DE;
+      box-shadow: none;
+    }
+  }
+
+
+  &.w-slds-btn-dark-blue {
+    background: #5061FA;
+    &:hover {
+      background-color: #2183DE;
+      box-shadow: none;
     }
   }
 }

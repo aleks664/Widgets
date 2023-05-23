@@ -7,6 +7,27 @@
     <title>Widgets saleads</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/w-slds-slider.css">
+    <!-- TODO: стили не как не относятся к виджетам-->
+    <style>
+      .wrapper {
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+      @media (min-width: 992px) {
+          .columns {
+              display: flex;
+          }
+          .columns .col.big {
+              max-width: calc(100% - 370px);
+              flex: 0 0 calc(100% - 370px);
+          }
+          .columns .col.small {
+              max-width: 370px;
+              flex: 0 0 370px;
+              padding-right: 20px;
+          }
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -31,7 +52,7 @@
                                 <div class="w-slds-desc-left">
                                   <div class="w-slds-ttl">Кредитная карта с высоким кэшбэком и очень длинным названием </div>
                                   <div class="w-slds-tags">
-                                    <div class="w-slds-tag">Бесплатное обслуживание</div>
+                                    <div class="w-slds-tag">Бесплатное обслуживание Бесплатное обслуживание Бесплатное обслуживание </div>
                                     <div class="w-slds-tag">Быстрое оформление</div>
                                     <div class="w-slds-tag">Третий длинный параметр</div>
                                   </div>
@@ -78,7 +99,7 @@
                                   <div class="w-slds-chars">
                                     <div class="w-slds-chars-itm">
                                       <div class="w-slds-chars-ttl">Возраст:</div>
-                                      <div class="w-slds-chars-val">от 18 лет</div>
+                                      <div class="w-slds-chars-val">от 18 лет параметр  с очень большими данными</div>
                                     </div>
                                     <div class="w-slds-chars-itm">
                                       <div class="w-slds-chars-ttl">Сумма:</div>
@@ -455,7 +476,7 @@
                                     <div class="w-slds-desc-left">
                                       <div class="w-slds-ttl">Кредитная карта с высоким кэшбэком и очень длинным названием </div>
                                       <div class="w-slds-tags">
-                                        <div class="w-slds-tag">Бесплатное обслуживание</div>
+                                        <div class="w-slds-tag">Бесплатное обслуживание Бесплатное обслуживание Бесплатное обслуживание </div>
                                         <div class="w-slds-tag">Быстрое оформление</div>
                                         <div class="w-slds-tag">Третий длинный параметр</div>
                                       </div>
@@ -502,7 +523,7 @@
                                       <div class="w-slds-chars">
                                         <div class="w-slds-chars-itm">
                                           <div class="w-slds-chars-ttl">Возраст:</div>
-                                          <div class="w-slds-chars-val">от 18 лет</div>
+                                          <div class="w-slds-chars-val">от 18 лет параметр  с очень большими данными</div>
                                         </div>
                                         <div class="w-slds-chars-itm">
                                           <div class="w-slds-chars-ttl">Сумма:</div>
@@ -705,7 +726,7 @@
                                     <div class="w-slds-desc-left">
                                       <div class="w-slds-ttl">Кредитная карта с высоким кэшбэком и очень длинным названием </div>
                                       <div class="w-slds-tags">
-                                        <div class="w-slds-tag">Бесплатное обслуживание</div>
+                                        <div class="w-slds-tag">Бесплатное обслуживание Бесплатное обслуживание Бесплатное обслуживание </div>
                                         <div class="w-slds-tag">Быстрое оформление</div>
                                         <div class="w-slds-tag">Третий длинный параметр</div>
                                       </div>
@@ -752,7 +773,7 @@
                                       <div class="w-slds-chars">
                                         <div class="w-slds-chars-itm">
                                           <div class="w-slds-chars-ttl">Возраст:</div>
-                                          <div class="w-slds-chars-val">от 18 лет</div>
+                                          <div class="w-slds-chars-val">от 18 лет параметр  с очень большими данными</div>
                                         </div>
                                         <div class="w-slds-chars-itm">
                                           <div class="w-slds-chars-ttl">Сумма:</div>
@@ -936,28 +957,7 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="js/core.js"></script>
+    <script src="js/marketingToggle.js"></script>
     <script src="js/w-slds-slider.js"></script>
-    <!-- TODO: стили не как не относятся к виджетам-->
-    <style>
-      .wrapper {
-          max-width: 1200px;
-          margin: 0 auto;
-      }
-      @media (min-width: 992px) {
-          .columns {
-              display: flex;
-          }
-          .columns .col.big {
-              max-width: calc(100% - 370px);
-              flex: 0 0 calc(100% - 370px);
-          }
-          .columns .col.small {
-              max-width: 370px;
-              flex: 0 0 370px;
-              padding-right: 20px;
-          }
-      }
-    </style>
   </body>
 </html>

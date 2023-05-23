@@ -1,0 +1,37 @@
+@import "variables";
+@import "../mixins/breakpoints";
+@import "fonts";
+@import "buttons";
+
+.w-slds {
+  font-family: $font-family-base;
+  color: $dark;
+  max-width: 1184px;
+  margin: 25px auto;
+  overflow: hidden;
+  @include media-breakpoint-up(md) {
+    margin: 50px auto;
+  }
+  * {
+    box-sizing: border-box;
+    font-family: $font-family-base;
+  }
+}
+.w-slds-card-popup-desc,
+.w-slds-chat-body {
+  scrollbar-width: thin;
+  scrollbar-color:#64B5FF  #137EE0;;
+  &::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #137EE0;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color:  #64B5FF;
+    border-radius: 4px;
+    border: 2px solid #137EE0;
+  }
+}

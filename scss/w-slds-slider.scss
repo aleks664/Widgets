@@ -1,23 +1,6 @@
-@import "variables";
-@import "mixins/breakpoints";
-@import "partials/fonts";
-@import "partials/buttons";
+@import "partials/core";
 @import "partials/w-slds-card-h";
 @import "partials/carousel-settings";
-.w-slds {
-  font-family: $font-family-base;
-  color: $dakr;
-  max-width: 1184px;
-  margin: 25px auto;
-  overflow: hidden;
-  @include media-breakpoint-up(md) {
-    margin: 50px auto;
-  }
-  * {
-    box-sizing: border-box;
-    font-family: $font-family-base;
-  }
-}
 .w-slds-slider {
   position: relative;
   @include media-breakpoint-up(md) {
