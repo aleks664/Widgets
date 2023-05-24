@@ -8,7 +8,21 @@ const wSldsSlider = (selector) => {
       const $pagination = $widget.querySelector('.swiper-pagination');
       const optionsCarousel = {
           spaceBetween: 0,
-          slidesPerView: 1
+          slidesPerView: 1,
+          autoplay: {
+              delay: 5000,
+          },
+          breakpoints: {
+              320: {
+                  slidesPerView: 1
+              },
+              594: {
+                  slidesPerView: 2
+              },
+              768: {
+                  slidesPerView: 1
+              }
+          }
       }
       if ($next && $prev && !optionsCarousel.navigation) {
           optionsCarousel.navigation =  {
@@ -26,7 +40,6 @@ const wSldsSlider = (selector) => {
       const optionsСompute = () => {
           const carouselW = $carousel.offsetWidth;
           const cardW = 300;
-          console.log(carouselW)
           if (carouselW < 680) {
               $widget.classList.add('carousel-phone')
               $widget.classList.remove('carousel-tablet')

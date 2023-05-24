@@ -145,6 +145,7 @@
 
     }
     &-head {
+      margin-bottom: 20px;
       &-ava {
         width: 39px;
         margin: 0 auto;
@@ -203,15 +204,17 @@
           margin-right: 22px;
         }
       }
-      &-btns {
-        display: flex;
-        margin: 17px -4.5px 0;
-        padding-bottom: 20px;
-        flex-flow: row wrap;
 
-      }
+    }
+    &-btns {
+      display: flex;
+      margin: 17px -4.5px 20px;
+      padding-bottom: 20px;
+      flex-flow: row wrap;
+
     }
   }
+
   .w-slds-btn {
     margin: 4.5px;
     height: 30px;
@@ -344,6 +347,9 @@
     align-items: center;
     padding: 22px 17px;
     border-top: 1px solid #137EE0;
+    &.no-border {
+      border:none;
+    }
     .w-slds-btn {
       margin: 0;
     }

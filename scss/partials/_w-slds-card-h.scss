@@ -48,6 +48,7 @@
     @include media-breakpoint-up(lg) {
       flex-flow: row nowrap;
       align-items: center;
+      justify-content: space-between;
     }
     @include media-breakpoint-up(xxl) {
       padding: 36px 43px;
@@ -194,3 +195,8 @@
 }
 
 
+html .w-slds-slider.carousel-tablet .w-slds-card-h .w-slds-btm .w-slds-btn-wrap {
+  @include media-breakpoint-down(sm) {
+    flex: 0 0 146px;
+  }
+}

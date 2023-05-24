@@ -7,7 +7,10 @@ const wSldsCarousel = (selector) => {
       const $pagination = $widget.querySelector('.swiper-pagination');
       const optionsCarousel = {
           spaceBetween: 0,
-          slidesPerView: 1
+          slidesPerView: 1,
+          autoplay: {
+              delay: 5000,
+          }
       }
       if ($next && $prev && !optionsCarousel.navigation) {
           optionsCarousel.navigation =  {

@@ -29,11 +29,65 @@
     &-btn {
       width: 79px;
       flex: 0 0 79px;
+      height: 79px;
       cursor: pointer;
-      cursor: pointer;
+      position: relative;
       svg {
         display: block;
         width: 100%;
+        animation: anim2 4s  linear infinite;
+      }
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -45%);
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        border: 1px solid rgba(92, 177, 255, 1);
+      }
+      &:after {
+        animation: anim 2s linear infinite;
+      }
+      &:before {
+        animation: anim 2s  1s linear infinite;
+      }
+      @keyframes anim {
+        0% {
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+        }
+        75% {
+          opacity: 1;
+          width: 150%;
+          height: 150%;
+        }
+        100% {
+          opacity: 0;
+          width: 150%;
+          height: 150%;
+        }
+      }
+      @keyframes anim2 {
+        0% {
+          transform: rotate(0deg);
+        }
+        10% {
+          transform: rotate(-50deg);
+        }
+        30% {
+          transform: rotate(50deg);
+        }
+        50% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
       }
     }
     &-step-1 {
@@ -192,12 +246,12 @@
           margin-right: 22px;
         }
       }
-      &-btns {
-        display: flex;
-        margin: 17px -4.5px 0;
-        flex-flow: row wrap;
 
-      }
+    }
+    &-btns {
+      display: flex;
+      margin: 17px -4.5px 20px;
+      flex-flow: row wrap;
     }
   }
   .w-slds-btn {

@@ -20,7 +20,6 @@ const getScrollbarWidth = () => {
     outer.appendChild(inner);
     const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
     outer.parentNode.removeChild(outer);
-
     return scrollbarWidth;
 }
 const tabs = (selector) => {
@@ -54,10 +53,13 @@ const tabs = (selector) => {
         $view.classList.remove('is-open');
         $panel.style.paddingRight =  '0px'
         const tabsBtnsActive = document.querySelectorAll('.w-slds-tab.is-visible, .w-slds-panel-box-btn.is-active');
-        tabsBtnsActive.forEach($el => {
-            $el.classList.remove('is-active');
-            $el.classList.remove('is-visible');
-        });
+        setTimeout(()=>{
+            tabsBtnsActive.forEach($el => {
+                $el.classList.remove('is-active');
+                $el.classList.remove('is-visible');
+            });
+        }, 500)
+
     });
 }
 tabs('[data-tab]')
